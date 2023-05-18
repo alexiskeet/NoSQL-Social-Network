@@ -35,7 +35,7 @@ const userSchema = new Schema(
         },
       },
 );
-
+// create a virtual called friendCount that retireves the length of the user's friends arrray field on query
 const User = model('user', userSchema);
 
 module.exports = User;
