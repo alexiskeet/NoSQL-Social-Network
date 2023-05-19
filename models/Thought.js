@@ -51,7 +51,11 @@ const reactionSchema = new Schema(
         get: () => moment(this.createdAt).format('YYYY-MM-DD:mm:ss'),
     }
 }
-)
+);
+
+thoughtSchema.virtual('reactionCount').get(function () {
+    return this.reactions.length;
+});
 
 
 // create a virtual called reactionCount that retrieves the length of the thought's reactions array field on query 
