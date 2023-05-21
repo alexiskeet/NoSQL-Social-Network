@@ -22,9 +22,12 @@ const userSchema = new Schema(
             reference: 'Thought'},
             //array of _id values referencing the Thought model
         
-        friends: {
+        friends: [
+            {
             type: Schema.Types.ObjectId,
-            reference: 'User'},
+            reference: 'User'
+    },
+]
     },
     {
         toJSON: {
