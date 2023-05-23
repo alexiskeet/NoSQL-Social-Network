@@ -72,7 +72,7 @@ module.exports = {
         try {
           const thought = await Thought.findOneAndUpdate(
             { _id: req.params.thoughtId },
-            { $addToSet: { reactions: req.body.reactionId } },
+            { $addToSet: { reactions: req.body } },
             { runValidators: true, new: true }
           );
     
